@@ -26,10 +26,6 @@ API RESTful desenvolvida em Laravel 11 que consome a API pública do Brasileirã
 
 ## 🚀 Funcionalidades Implementadas
 
----
-
-## 🚀 Funcionalidades
-
 - Listagem de campeonatos ativos
 - Detalhes de campeonatos (edição, rodada atual, etc.)
 - Tabela de classificação em tempo real
