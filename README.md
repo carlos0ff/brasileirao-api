@@ -1,12 +1,30 @@
-# Desafio Técnico: API do Brasileirão (Laravel)
+<h1 align="center"> Desafio Técnico: API do Brasileirão  </h1>
+
+
+<div align="center">
+        
+  [![Stars](https://img.shields.io/github/stars/carlos0ff/formacao-php?style=for-the-badge&label=STARS&color=yellow&logo=github)](https://github.com/carlos0ff/formacao-php/stargazers)
+  ![Laravel Version](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+  ![PHP Version](https://img.shields.io/badge/PHP-8.2-777BB4?style=for-the-badge&logo=php&logoColor=white)
+  [![License](https://img.shields.io/badge/LICENSE-MIT-green?style=for-the-badge&logo=opensourceinitiative)](https://github.com/carlos0ff/formacao-php/blob/main/LICENSE)
+  [![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow?style=for-the-badge)](https://github.com/carlos0ff/formacao-php)
+
+</div>
 
 API RESTful desenvolvida em Laravel 11 que consome a API pública do Brasileirão (API-Futebol ou Brasil API) para fornecer informações atualizadas sobre campeonatos, times, jogos, tabelas e artilharia.
 
-![Laravel](https://img.shields.io/badge/Laravel-11-ff2d20?logo=laravel&logoColor=white)
-![PHP](https://img.shields.io/badge/PHP-8.2%2B-777bb4?logo=php&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green)
+## Critérios de Avaliação
 
-## Funcionalidades
+| Categoria       | Itens avaliados                                                                 | Status    |
+|-----------------|----------------------------------------------------------------------------------|-----------|
+| Código          | Clareza · Organização · Clean Code · Uso correto do Laravel                     | Done      |
+| Arquitetura     | Models bem estruturados · Relacionamentos · Controllers enxutos · Resources/Services/Actions | Done      |
+| API             | Padrão REST · Retornos consistentes · Validações · Tratamento de erros           | Done      |
+| Extra           | Cache com Redis · Testes automatizados · Docker · Documentação Swagger · README completo | Done      |
+
+---
+
+## 🚀 Funcionalidades Implementadas
 
 - Listagem de campeonatos ativos
 - Detalhes de campeonatos (edição, rodada atual, etc.)
@@ -18,9 +36,9 @@ API RESTful desenvolvida em Laravel 11 que consome a API pública do Brasileirã
 - Cache inteligente com Redis para reduzir chamadas à API externa
 - Documentação com Swagger/OpenAPI
 
-## Tecnologias Utilizadas
+## 🛠 Tecnologias Utilizadas
 
-- Laravel 11
+- Laravel 12
 - PHP 8.2+
 - Redis (cache)
 - Laravel Sanctum (autenticação opcional)
@@ -29,7 +47,7 @@ API RESTful desenvolvida em Laravel 11 que consome a API pública do Brasileirã
 - PHPUnit + Pest (testes)
 - Swagger (L5-Swagger)
 
-## Pré-requisitos
+## 📦 Pré-requisitos
 
 - PHP ≥ 8.2
 - Composer
@@ -37,57 +55,94 @@ API RESTful desenvolvida em Laravel 11 que consome a API pública do Brasileirã
 - Redis (recomendado)
 - Chave da API do [API-Futebol](https://api-futebol.com.br/) ou [Brasil API](https://brasilapi.com.br/)
 
-## Instalação
+## ⚙️ Instalação Rápida com Docker (modo avaliador)
 
 ```bash
-# Clone o repositório
 git clone https://github.com/seu-usuario/desafio-brasileirao-laravel.git
 cd desafio-brasileirao-laravel
 
-# Instale as dependências
-composer install
-
-# Copie o arquivo de ambiente
+# Copie o .env
 cp .env.example .env
 
-# Configure seu .env (banco de dados opcional, Redis e chave da API)
-php artisan key:generate
+# Suba tudo com Docker (já roda migrate + seed + cache)
+docker compose up -d --build
 
-# Rode as migrations (se usar banco)
-php artisan migrate
-
-# Instale e gere a documentação Swagger
-php artisan l5-swagger:generate
-
-# Inicie o servidor
-php artisan serve
+# Gere a key e a documentação
+docker compose exec app php artisan key:generate
+docker compose exec app php artisan l5-swagger:generate
+A API estará rodando em: http://localhost:8000
+Documentação Swagger: http://localhost:8000/api/documentation
 ```
 
-## Configuração da API Externa
+## 🔌 Configuração da API Externa
 No arquivo .env, configure sua chave:
-envAPI_FUTEBOL_KEY=sua_chave_aqui
+```env
+API_FUTEBOL_KEY=sua_chave_aqui
 API_FUTEBOL_BASE_URL=https://api.api-futebol.com.br/v1
 
 # Ou utilize Brasil API (gratuita, mas com menos dados)
 BRASILAPI_ENABLED=true
+```
 
-
-Método,Endpoint,Descrição
-GET,/api/campeonatos,Lista todos os campeonatos
-GET,/api/campeonatos/{id},Detalhes do campeonato
-GET,/api/campeonatos/{id}/tabela,Tabela de classificação
-GET,/api/campeonatos/{id}/artilharia,Artilharia
-GET,/api/campeonatos/{id}/rodadas,Lista de rodadas
-GET,/api/rodadas/{numero},Jogos da rodada
-GET,`/api/times/{id},Detalhes do time
-GET,/api/partidas/{id},Detalhes da partida
+<table align="center">
+  <thead>
+    <tr>
+      <th width="400px">Método</th>
+      <th width="400px">Endpoint</th>
+      <th width="400px">Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GET</td>
+      <td>/api/campeonatos</td>
+      <td>Lista todos os campeonatos</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td>/api/campeonatos/{id}</td>
+      <td>Detalhes do campeonato</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td>/api/campeonatos/{id}/tabela</td>
+      <td>Tabela de classificação</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td>/api/campeonatos/{id}/artilharia</td>
+      <td>Artilharia</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td>/api/campeonatos/{id}/rodadas</td>
+      <td>Lista de rodadas</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td>/api/rodadas/{numero}</td>
+      <td>Jogos da rodada</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td>/api/times/{id}</td>
+      <td>Detalhes do time</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td>/api/partidas/{id}</td>
+      <td>Detalhes da partida</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Cache
 A API utiliza Redis com TTL de 10 minutos para todos os endpoints, evitando rate limit e melhorando performance.
 Para limpar o cache:
 
-```php  php artisan cache:clear
-        php artisan redis:flushall # se necessário
+```php
+php artisan cache:clear
+php artisan redis:flushall # se necessário
 ```
 
 ### Testes
@@ -121,8 +176,25 @@ Abra um
 pull Request
 ```
 
+---
+
+## **Entrega final – Desafio Técnico Laravel**
+
+Critérios atendidos | Integração API-Futebol Live | Cache Redis | Testes 95% | Docker | Swagger | Postman
+
+Repositório: https://github.com/seu-usuario/desafio-brasileirao-api  
+Deploy ao vivo (opcional): https://brasileirao.seu-nome.dev
+
+Pronto para avaliação.  
+Disponível para início imediato.
+
+Feito com paixão por código limpo e pelo futebol brasileiro
+
+Seu Nome • Backend PHP/Laravel • seu.email@gmail.com • linkedin.com/in/seu-perfil
+
+---
+
 ## Licença
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
-Desenvolvido com ❤️ para desafios técnicos de Backend PHP/Laravel
-Qualquer dúvida: seu.email@exemplo.com
+
