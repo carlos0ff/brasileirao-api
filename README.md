@@ -1,5 +1,6 @@
 <h1 align="center"> Desafio Técnico: API do Brasileirão </h1>
 
+
 <div align="center">
 
  [![Stars](https://img.shields.io/github/stars/carlos0ff/formacao-php?style=for-the-badge&label=STARS&color=yellow&logo=github)](https://github.com/carlos0ff/formacao-php/stargazers)
@@ -9,6 +10,11 @@
   [![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow?style=for-the-badge)](https://github.com/carlos0ff/formacao-php)
 
 </div>
+
+> <p align="center">
+  <i><b>Obs:</b> Este desafio técnico não representa uma vaga real. Foi criado exclusivamente para estudos, tendo sido gerado com auxílio de uma Inteligência Artificial, simulando um desafio de contratação para desenvolvedor PHP Júnior.</i>
+</p>
+
 
 API RESTful desenvolvida em Laravel 11 que consome a API pública do Brasileirão (API-Futebol ou Brasil API) para fornecer informações atualizadas sobre campeonatos, times, jogos, tabelas e artilharia.
 
@@ -248,10 +254,14 @@ php artisan redis:flushall # se necessário
 ```
 
 # ou
+```bash 
 php artisan test
-Cobertura atual: ~92%
-Deploy (exemplo com Laravel Forge / Vapor / Heroku)
-Basta apontar para o diretório public e rodar as migrations.
+```
+
+Cobertura atual: ```~92%```
+- Deploy (exemplo com Laravel Forge / Vapor / Heroku)
+- Basta apontar para o diretório public e rodar as migrations.
+
 O projeto está pronto para ambientes com Horizon + Redis + Supervisor.
 Contribuição
 
@@ -275,23 +285,24 @@ Abra um
 ```bash
 pull Request
 ```
----
-
-
 
 ---
 
 ## **Entrega final – Desafio Técnico Laravel**
 
-Critérios atendidos | Integração API-Futebol Live | Cache Redis | Testes 95% | Docker | Swagger | Postman
+Critérios que deverá ser atendidos:
+- Integração API-Futebol Live
+- Cache Redis
+- Testes 95%
+- Docker
+- Swagger
+- Postman
 
 Repositório: https://github.com/seu-usuario/desafio-brasileirao-api
-Deploy ao vivo (opcional): https://brasileirao.seu-nome.dev
-
-Pronto para avaliação.
-Disponível para início imediato.
-
-Feito com paixão por código limpo e pelo futebol brasileiro
+- Deploy ao vivo (opcional): https://brasileirao.seu-nome.dev
+- Pronto para avaliação.
+- Disponível para início imediato.
+- Feito com paixão por código limpo e pelo futebol brasileiro
 
 Seu Nome • Backend PHP/Laravel • seu.email@gmail.com • linkedin.com/in/seu-perfil
 
@@ -300,18 +311,8 @@ Seu Nome • Backend PHP/Laravel • seu.email@gmail.com • linkedin.com/in/seu
 ## Licença
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
-<<<<<<< HEAD
-
-=======
+---
+<p  align="center">
 Desenvolvido com ❤️ para desafios técnicos de Backend PHP/Laravel
-Qualquer dúvida: seu.email@exemplo.com
+</p>
 
-
-## ❤️ Desenvolvido por
-
-Feito com dedicação para desafios técnicos de Backend PHP/Laravel.
-Dúvidas? → seu.email@exemplo.com❤️ Desenvolvido por
-
-Feito com dedicação para desafios técnicos de Backend PHP/Laravel.
-Dúvidas? → seu.email@exemplo.com
->>>>>>> 3a5a586 (chore: licença MIT padrão, atendendo 100% dos critérios de entrega e boas práticas de projetos open-source/desafios técnicos.)
