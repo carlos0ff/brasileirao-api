@@ -15,13 +15,39 @@ API RESTful desenvolvida em Laravel 11 que consome a API pública do Brasileirã
 
 ## Critérios de Avaliação
 
-| Categoria       | Itens avaliados                                                                 | Status    |
-|-----------------|----------------------------------------------------------------------------------|-----------|
-| Código          | Clareza · Organização · Clean Code · Uso correto do Laravel                     | Done      |
-| Arquitetura     | Models bem estruturados · Relacionamentos · Controllers enxutos · Resources/Services/Actions | Done      |
-| API             | Padrão REST · Retornos consistentes · Validações · Tratamento de erros           | Done      |
-| Extra           | Cache com Redis · Testes automatizados · Docker · Documentação Swagger · README completo | Done      |
-
+<table align="center">
+  <caption>Avaliação</caption>
+  <thead>
+    <tr>
+      <th width="150px">Categoria</th>
+      <th width="400px">Itens avaliados</th>
+      <th width="350px">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Código</td>
+      <td>Clareza · Organização · Clean Code · Uso correto do Laravel</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>Arquitetura</td>
+      <td>Models bem estruturados · Relacionamentos · Controllers enxutos · Resources/Services/Actions</td>
+      <td>Concluído</td>
+    </tr>
+    <tr>
+      <td>API</td>
+      <td>Padrão REST · Retornos consistentes · Validações · Tratamento de erros</td>
+      <td>Concluído</td>
+    </tr>
+    <tr>
+      <td>Extra</td>
+      <td>Cache com Redis · Testes automatizados · Docker · Documentação Swagger · README completo</td>
+      <td>Concluído</td>
+    </tr>
+  </tbody>
+</table>
+ 
 ---
 
 ## 🚀 Funcionalidades Implementadas
@@ -59,12 +85,10 @@ API RESTful desenvolvida em Laravel 11 que consome a API pública do Brasileirã
 - Redis (recomendado)
 - Chave da API do [API-Futebol](https://api-futebol.com.br/) ou [Brasil API](https://brasilapi.com.br/)
 
+---
 
 ## ⚙️ Instalação Rápida com Docker (modo avaliador)
 
----
-
-## ⚙️ Instalação
 
 ```bash
 git clone https://github.com/seu-usuario/desafio-brasileirao-laravel.git
@@ -93,6 +117,7 @@ API_FUTEBOL_BASE_URL=https://api.api-futebol.com.br/v1
 # Ou utilize Brasil API (gratuita, mas com menos dados)
 BRASILAPI_ENABLED=true
 ```
+
 <table align="center">
   <thead>
     <tr>
