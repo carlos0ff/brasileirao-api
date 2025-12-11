@@ -16,12 +16,11 @@ API RESTful desenvolvida em Laravel 11 que consome a API pública do Brasileirã
 ## Critérios de Avaliação
 
 <table align="center">
-  <caption>Avaliação</caption>
   <thead>
     <tr>
       <th width="150px">Categoria</th>
-      <th width="400px">Itens avaliados</th>
-      <th width="350px">Status</th>
+      <th width="720px">Itens avaliados</th>
+      <th width="100px">Status</th>
     </tr>
   </thead>
   <tbody>
